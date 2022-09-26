@@ -11,7 +11,7 @@ public class StringCalculator{
 
         if(numbers.indexOf("//") == 0){
             String[] delimiters_array = numbers.substring(2, numbers.indexOf("\n")).split("]");
-            System.out.println(delimiters_array.length);
+
             if(delimiters_array.length > 1) {
             for(int i = 0; i < delimiters_array.length - 1; i++){
                 delimiter = delimiter + delimiters_array[i] + "]+|";
@@ -24,7 +24,7 @@ public class StringCalculator{
             regex = "\n|,|" + delimiter;
             numbers = numbers.substring(numbers.indexOf("\n") + 1);
         }
-        System.out.println(regex);
+
         String[] elements = numbers.split(regex);
 
         int sum = 0;
